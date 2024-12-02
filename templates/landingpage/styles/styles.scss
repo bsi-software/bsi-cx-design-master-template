@@ -16,6 +16,15 @@ $logoWidth: bsiProperty('logoWidth', 60px);
       }
     }
   }
+
+  .icon-header{ 
+    figure{
+      img {
+        width: $logoWidth;
+      }
+    }
+  }
+  
   .container.bsi-logo-align-right {
     justify-content: flex-end !important;
     .navbar-brand {
