@@ -4,8 +4,10 @@
         <title>BSI CX Master Template</title>
         {% include  './../shared/html-header.twig' %}
     </head>
-
-    <body class="d-flex flex-column min-vh-100">
+    {# target dark mode #}
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark only">
+    <body class="d-flex flex-column min-vh-100 bsi-dm-bg-color">
     {% apply spaceless %}
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container {{ properties.logoAlignment }}">

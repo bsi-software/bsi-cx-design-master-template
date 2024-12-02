@@ -1,17 +1,53 @@
 const {css} = require('@bsi-cx/design-build');
 
+const primaryColor = css.color('#16616d');
+const secondaryColor = css.color('#ff7d00');
+const darkColor = css.color('#383e42');
+const lightColor = css.color('#ffffff');
+const infoColor = css.color('#6c757d');
+
+
+const lightGrey = css.color('#e6e6e6');
+const darkGrey = css.color('#383e42');
+
+const backgroundLight = css.color('#f4f4f4');
+const backgroundMedium = css.color('#efe3d4');
+const backgroundDark = css.color('#7c3d01');
+
+
 module.exports = {
 
   /* ============================================================= */
   /*	                           Colors	                           */
   /* ============================================================= */
 
-  primaryColor: css.color('#16616d'),
-  secondaryColor: css.color('#ff7d00'),
-  darkColor: css.color('#383e42'),
-  lightColor: css.color('#ffffff'),
-  infoColor: css.color('#6c757d'),
+  primaryColor,
+  secondaryColor,
+  darkColor,
+  lightColor,
+  infoColor,
 
+  /* --------------------- Background Colors --------------------- */
+
+  // Elements using layoutBaseBackgroundColor: layout base
+  layoutBaseBackgroundColor: lightColor,
+
+  // A bright and neutral color should be chosen here, a discrete color matching the primary or secondary color can be generated here: https://mycolor.space/
+  // Elements using layoutColoredBackgroundColor: layout with background color
+  layoutColoredBackgroundColor: backgroundLight,
+  layoutColoredBackgroundColorDarkMode: darkGrey,
+
+  // Elements using highlightedBackgroundColor: highlighted content
+  highlightBackgroundColor: backgroundMedium,
+  highlightBackgroundColorDarkMode: backgroundDark,
+
+  // Elements using eventBackgroundColor: event
+  eventBackgroundColor: secondaryColor,
+
+  // Elements using footerBackgroundColor: footer layout base
+  footerDarkBackgroundColor: darkGrey,
+  // Elements using footerLightBackgroundColor: footer layout light
+  footerLightBackgroundColor: lightColor,
 
   /* ============================================================= */
   /*	                           Fonts	                           */
