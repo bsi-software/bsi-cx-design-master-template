@@ -1,80 +1,89 @@
-require('./styles/styles.scss');
+require("./styles/styles.scss");
 
-const {cx, SchemaVersion, Locale} = require('@bsi-cx/design-build');
+const { cx, SchemaVersion, Locale } = require("@bsi-cx/design-build");
 
 module.exports = cx.design
   .withSchemaVersion(SchemaVersion.V_22_0)
-  .withTitle('BSI CX Master Template - Website')
-  .withAuthor('Design Team - BSI Business Systems Integration AG')
-  .withDate('21.01.2022')
-  .withPreviewImage('static/header.png')
+  .withTitle("BSI CX Master Template - Website")
+  .withAuthor("Design Team - BSI Business Systems Integration AG")
+  .withDate("21.01.2022")
+  .withPreviewImage("static/header.png")
   .withDefaultLocale(Locale.EN)
   .withLocales(Locale.EN)
   .withContentElementGroups(
     cx.contentElementGroup
-      .withGroupId('header-Eev4oq')
-      .withLabel('Header')
+      .withGroupId("header-Eev4oq")
+      .withLabel("Header")
       .withContentElements(
-        require('./../shared/content-elements/logo'),
-        require('./../shared/content-elements/header-image')),
+        // require("@bsi-cx/design-standard-library-web/content-elements/advanced/logo-with-darkmode"),
+        require("./../shared/content-elements/logo"),
+        require("./../shared/content-elements/header-image")
+      ),
     cx.contentElementGroup
-      .withGroupId('layout-EhFpQ7')
-      .withLabel('Layout')
+      .withGroupId("layout-EhFpQ7")
+      .withLabel("Layout")
       .withContentElements(
-        require('@bsi-cx/design-standard-library-web/content-elements/layout/col-one'),
-        require('@bsi-cx/design-standard-library-web/content-elements/layout/col-two'),
-        require('@bsi-cx/design-standard-library-web/content-elements/layout/col-three'),
-        require('@bsi-cx/design-standard-library-web/content-elements/layout/col-four'),
-        require('@bsi-cx/design-standard-library-web/content-elements/layout/spacer')),
+        require("@bsi-cx/design-standard-library-web/content-elements/layout/col-one"),
+        require("@bsi-cx/design-standard-library-web/content-elements/layout/col-two"),
+        require("@bsi-cx/design-standard-library-web/content-elements/layout/col-three"),
+        require("@bsi-cx/design-standard-library-web/content-elements/layout/col-four"),
+        require("@bsi-cx/design-standard-library-web/content-elements/layout/spacer")
+      ),
     cx.contentElementGroup
-      .withGroupId('headings-J9rRcv')
+      .withGroupId("headings-J9rRcv")
       /*.withLabel('Headings')*/
-      .withLabel('Überschriften')
+      .withLabel("Überschriften")
       .withContentElements(
-        require('@bsi-cx/design-standard-library-web/content-elements/base/h1'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/h2'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/h3')),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/h1"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/h2"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/h3")
+      ),
     cx.contentElementGroup
-      .withGroupId('content-JFLFHv')
+      .withGroupId("content-JFLFHv")
       /*.withLabel('Content')*/
-      .withLabel('Inhalt')
+      .withLabel("Inhalt")
       .withContentElements(
-        require('@bsi-cx/design-standard-library-web/content-elements/base/text'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/figure'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/banner'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/button'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/card'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/accordion'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/news-snippet'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/table'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/video'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/social-media-follow'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/social-media-share'),
-        require('@bsi-cx/design-standard-library-web/content-elements/advanced/webcam-image-upload'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/slot-finder'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/chart'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/html')),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/text"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/figure"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/banner"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/button"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/card"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/accordion"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/news-snippet"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/table"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/video"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/social-media-follow"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/social-media-share"),
+        require("@bsi-cx/design-standard-library-web/content-elements/advanced/webcam-image-upload"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/slot-finder"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/chart"),
+        require("@bsi-cx/design-standard-library-web/content-elements/base/html")
+      ),
     cx.contentElementGroup
-      .withGroupId('forms-NjbmnQ')
+      .withGroupId("forms-NjbmnQ")
       /*.withLabel('Forms')*/
-      .withLabel('Formular')
+      .withLabel("Formular")
       .withContentElements(
-        require('@bsi-cx/design-standard-library-web/content-elements/form/form-container'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/multi-column'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/form-field'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/form-field-tel'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/text-area'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/select'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/checkbox'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/radio'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/poll'),
-        require('@bsi-cx/design-standard-library-web/content-elements/form/recaptcha')))
+        require("@bsi-cx/design-standard-library-web/content-elements/form/form-container"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/multi-column"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/form-field"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/form-field-tel"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/text-area"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/select"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/checkbox"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/radio"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/poll"),
+        require("@bsi-cx/design-standard-library-web/content-elements/form/recaptcha")
+      )
+  )
   .withWebsite(
     cx.website
       .withMaxNavigationLevel(2)
       .withIncludes(
-        require('./includes/navigation'),
-        require('./includes/logo'),
-        require('./includes/header'),
-        require('./includes/page'),
-        require('./includes/footer')));
+        require("./includes/navigation"),
+        require("./includes/logo"),
+        require("./includes/header"),
+        require("./includes/page"),
+        require("./includes/footer")
+      )
+  );
