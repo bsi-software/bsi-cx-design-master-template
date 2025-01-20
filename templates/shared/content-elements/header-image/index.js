@@ -12,5 +12,8 @@ module.exports = contentElement(
   'header-image-dropzone-Dt5Gll',
   'header-image-part-MHZ8Gp',
   /*'Header image'*/
-  'Header Bild'
+  'Header Bild',
+  'header-image-mobile-part-29bfdf',
+  'Header Mobile Bild'
+  
 );
